@@ -1,16 +1,16 @@
 <template>
-  <div class="header">
+  <div class="header" id="header">
     <div class="header-top wean">
       <div class="header-top-img">
         <img src="https://piccdn2.umiwi.com/fe-oss/default/MTYzNzA0MzE4NTgz.png" alt="">
       </div>
       <div class="header-top-Search">
-        <div class="Search">
+        <div :class="['Search',{active:isActive}]">
           <i class="iconfont-698">&#xe698;</i>
-          <input type="text" placeholder="你想学习什么？">
+          <input type="text" placeholder="你想学习什么？" @click="add">
           <button>得到一下</button>
         </div>
-        <div class="Elephant">
+        <div class="Elephant" v-show="isShow">
           <h5>热门搜索</h5>
           <div>
             <ul>
@@ -48,7 +48,7 @@
           </i>
         </div>
         <div class="Cat-Login">
-          <div class="Login">
+          <div class="Login" @click="addLogin">
             登录 | 注册
           </div>
           <div class="Banana">
@@ -82,7 +82,37 @@
     </div>
   </div>
 </template>
+
 <script>
+import Bus from '../utils/EventBus'
+
+export default {
+  name: 'header',
+  data() {
+    return {
+      isShow: false,
+      isActive: false,
+    }
+
+
+  },
+  methods: {
+
+    add() {
+      if (!this.isShow && !this.isActive) {
+        this.isShow = true
+        this.isActive = !this.isActive
+      }
+    },
+    addLogin() {
+      // 发送的键 跟 值
+      Bus.$emit('take',true)
+    }
+
+
+  },
+
+}
 
 
 </script>
