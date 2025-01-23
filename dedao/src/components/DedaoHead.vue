@@ -75,7 +75,7 @@
               立即登录
             </div>
             <p>首次登录？<a href="#">点我登录</a></p>
-          </div>
+          </div>登
           <div class="Dog"></div>
         </div>
       </div>
@@ -93,10 +93,9 @@ export default {
       isShow: false,
       isActive: false,
     }
-
-
   },
   methods: {
+
 
     add() {
       if (!this.isShow && !this.isActive) {
@@ -104,9 +103,10 @@ export default {
         this.isActive = !this.isActive
       }
     },
-    addLogin() {
-      // 发送的键 跟 值
-      Bus.$emit('take',true)
+    addLogin(){
+      console.log('点击了登录')
+      // 把值传给登录窗口子组件，键名，值
+      this.$emit('Sunshine',true)
     }
 
 

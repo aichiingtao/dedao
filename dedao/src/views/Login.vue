@@ -1,5 +1,5 @@
 <template>
-  <div id="Login" class="Rainbow" v-show="isShow">
+  <div id="Login" class="Rainbow" v-show="isShow" @Sunshine="Rainbow">
     <div  class="Flower">
       <div class="Guitar">
         <h3>验证码登录</h3>
@@ -48,11 +48,11 @@ export default {
       isShow:false
     }
   },
-  isShow(){
-    //   创建一个接受兄弟新的的函数
-    //  接收的名字，和 msg用来代替接收过来的值
-    Bus.$on('take', (msg) => {
-      this.isShow = msg})
+  methods:{
+    // Rainbow接收到的值，Rainbow = get
+    Rainbow(get){
+      this.isShow = get
+    }
   }
 }
 
