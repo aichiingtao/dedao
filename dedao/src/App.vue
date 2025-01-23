@@ -1,19 +1,17 @@
 <template>
   <div id="app">
     <DedaoHead></DedaoHead>
-    <Login></Login>
   </div>
 </template>
 
 <script>
 import DedaoHead from './components/DedaoHead.vue'
-import Login from './views/Login.vue'
+
 
 export default {
   name: 'App',
   components: {
     DedaoHead,
-    Login
   }
 }
 </script>

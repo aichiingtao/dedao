@@ -1,9 +1,25 @@
 .Rainbow{
-
     position: fixed;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
+}
+
+.Tiger{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    .iconfont-674{
+        font-family: 'iconfont' !important;
+        font-size: 20px;
+        opacity: 0.5;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
 }
 
 .Flower {
@@ -21,6 +37,7 @@
 }
 
 .Guitar {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,6 +58,7 @@
         align-items: center;
         margin-top: 15px;
 
+
         label {
             margin: 0 5px 0 10px;
         }
@@ -57,6 +75,23 @@
             background-color: #f6f6f6;
         }
 
+        button{
+            color: #ff6b00;
+            cursor: pointer;
+            background-color: #f6f6f6;
+            margin: 0 10px;
+            height: 25px;
+            font-size: 16px;
+        }
+
+    }
+
+    p{
+        position: absolute;
+        top: 102px;
+        left: 34px;
+        font-size: 12px;
+        color: #fd6721;
     }
 
     .Journey{
@@ -69,6 +104,9 @@
         align-items: center;
         color: #ffffff;
         margin-top: 40px;
+        &:hover{
+            background-color: rgba(253, 103, 33, 0.8);
+        }
     }
 
     .Kite{
@@ -81,6 +119,7 @@
         input{
             margin-right: 10px;
         }
+
     }
 
     .Lemon{
@@ -110,6 +149,7 @@
     }
 
     .Ocean{
+        position: relative;
         width: 140px;
         height: 140px;
         padding: 10px;
@@ -118,6 +158,29 @@
         img{
             width: 100%;
             height: 100%;;
+        }
+
+        .Discovery{
+            z-index: 1;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            position: absolute;
+            p{
+                text-align: center;
+                line-height: 20px;
+            }
+            button{
+                font-size: 16px;
+               background:none;
+                color: #4a90e2;
+            }
         }
     }
 
