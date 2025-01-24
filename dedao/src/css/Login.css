@@ -71,7 +71,7 @@
             flex: 1;
             outline: none;
             height: 25px;
-            margin: 0 0 0 20px;
+            margin: 0 10px;
             background-color: #f6f6f6;
         }
 
@@ -79,9 +79,10 @@
             color: #ff6b00;
             cursor: pointer;
             background-color: #f6f6f6;
-            margin: 0 10px;
-            height: 25px;
             font-size: 16px;
+            text-align: center;
+            width: 120px;
+            margin-right: 5px;
         }
 
     }
@@ -196,9 +197,13 @@
         font-size: 13px;
         color: #8d8d8d;
       .iconfont-762{
+          cursor: pointer;
           color: #979797;
           font-size: 18px;
           font-family: 'iconfont' !important;
       }
+        .active{
+            color: #fd6721;
+        }
     }
 }

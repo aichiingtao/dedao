@@ -1,9 +1,12 @@
-    .header {
+.header {
     width: 100%;
     height: 64px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
     position: fixed;
+    top: 0px;
+    flex: 0;
     margin: 0;
+    background-color: white;
 }
 
 
@@ -57,16 +60,18 @@
             background-color: #fd6721;
             font-size: 16px;
             color: #ffff;
-            &:hover{
+
+            &:hover {
                 background-color: rgba(253, 103, 33, 0.8);
             }
         }
     }
 
-    .active{
+    .active {
         background-color: #ffffff;
         border-radius: 8px 8px 8px 0;
-        input{
+
+        input {
             background-color: #ffffff;
         }
     }
@@ -106,7 +111,7 @@
                     font-family: 'iconfont' !important;
                 }
 
-                p{
+                p {
                     font-size: 12px;
                 }
             }
@@ -143,30 +148,32 @@
 
     }
 
-    .Adventure{
+    .Adventure {
         position: relative;
         cursor: pointer;
 
-        &:hover{
-            .Breeze{
+        &:hover {
+            .Breeze {
                 display: block;
             }
-            .Zebra{
+
+            .Zebra {
                 display: flex;
             }
         }
 
         .iconfont-904 {
+
             font-family: 'iconfont' !important;
             font-size: 20px;
         }
 
-        .Breeze{
+        .Breeze {
             display: none;
-            z-index: 1;
+            z-index: 999;
             transform: rotate(-45deg);
             position: absolute;
-            top: 29px;
+            top: 36px;
             right: 0px;
             width: 20px;
             height: 20px;
@@ -175,7 +182,9 @@
             border-right: 1px solid lightgrey;
             border-radius: 0 4px 0 0;
         }
-        .Zebra{
+
+        .Zebra {
+            z-index: 5;
             display: none;
             border-radius: 8px;
             background-color: #ffffff;
@@ -183,7 +192,7 @@
             height: 255px;
             border: 1px solid lightgrey;
             padding: 20px;
-            top: 38px;
+            top:46px;
             flex-direction: column;
             justify-content: space-between;
             right: -70px;
@@ -191,16 +200,17 @@
             font-size: 14px;
             color: #7f7f77;
             line-height: 18px;
-            h3{
+
+            h3 {
                 color: #333333;
             }
-            i{
+
+            i {
                 color: #fd6721;
             }
         }
 
     }
-
 
 
     .Cat-Login {
@@ -234,6 +244,7 @@
 
 
         .Banana {
+            z-index: 3;
             display: none;
             background-color: #ffffff;
             position: absolute;
@@ -277,7 +288,8 @@
                 color: #ffffff;
                 font-weight: 350;
                 margin-bottom: 20px;
-                &:hover{
+
+                &:hover {
                     background-color: rgba(253, 103, 33, 0.8);
                 }
             }
@@ -296,6 +308,7 @@
         }
 
         .Dog {
+            z-index: 5;
             display: none;
             position: absolute;
             top: 60px;

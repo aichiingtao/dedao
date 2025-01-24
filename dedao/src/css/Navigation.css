@@ -1,0 +1,164 @@
+
+#Navigation {
+    margin-top: 84px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Adventure {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 0;
+
+    .Energy {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        width: 150px;
+        padding-left: 20px;
+        a{
+            font-weight: 700;
+            color: #333333;
+            font-size: 14px;
+        }
+        &:hover {
+            background-color: #fff7f4;
+            >a{
+                color: #fd6721;
+            }
+            .Breeze{
+                display: block;
+            }
+        }
+
+        .iconfont-746 {
+            color: #8d8d8d;
+            font-size: 12px;
+            margin-right: 10px;
+            font-family: 'iconfont' !important;
+        }
+
+        .Breeze {
+            z-index: 1;
+            display: none;
+            position: absolute;
+            top: 0;
+            right: -190px;
+            background-color: white;
+            border-radius: 0 8px 8px 0;
+            padding: 10px 20px;
+            a{
+                color: #979797;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                width: 150px;
+                height: 40px;
+                align-items: center;
+                &:hover{
+                    a{
+                        color:#ff6b00;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+.Chocolate {
+    position: relative;
+    flex: 1;
+    margin: 0 20px;
+
+    img {
+        border-radius: 8px;
+        width: 100%;
+        height: 375px;
+    }
+
+    .Galaxy{
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        right: 50px;
+        div{
+            cursor: pointer;
+            opacity: 0.5;
+            font-family: 'iconfont' !important;
+            color: #ffffff;
+            width: 50px;
+            height: 50px;
+            border: 1px solid lightgrey;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            margin-right: 10px;
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        .active{
+            opacity: 0;
+        }
+
+    }
+    .Spirit{
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        Left:50px;
+        height: 10px;
+        span{
+            border-radius: 8px;
+            background-color: #9999;
+            width: 15px;
+            height: 3px;
+            margin: 5px;
+            &:hover{
+                height: 5px;
+            }
+        }
+        .active{
+            background-color: #f9f9f9;
+            height: 3px;
+        }
+    }
+}
+
+.Discovery {
+    padding: 20px 10px;
+    background-color: white;
+    border-radius: 8px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+    .Energy {
+        cursor: pointer;
+        border-radius: 8px;
+        background-color: #ff6b00;
+        color: white;
+        font-size: 14px;
+        width: 140px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+
+
+    }
+}

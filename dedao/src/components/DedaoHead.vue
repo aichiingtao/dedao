@@ -116,6 +116,7 @@ export default {
       isShow: false,
       isShow1: false,
       isActive: false,
+      Energy:false,
     }
   },
 
@@ -130,17 +131,22 @@ export default {
     // 登录弹窗显示
     addLogin(){
       this.isShow1 = true
-      // 5秒之后，手动刷新二维码
+      // 登录弹窗显示，5秒之后，手动刷新二维码
       let i = 5
-      const Timer = setInterval(function (){
+      const Timer = setInterval( () =>{
         i--
-
         if (i === 0){
           this.$emit('Friendship', true)
+          clearInterval(Timer)
           console.log('倒计时刷新二维码')
         }
       },1000)
     },
+
+    Galaxy(){
+      console.log(123)
+    },
+
 
     // 关闭登录窗口
     Yacht(get){
