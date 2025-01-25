@@ -11,13 +11,13 @@
     border-radius: 8px;
     padding: 10px 0;
 
-    .Energy {
+    .Light {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 40px;
-        width: 150px;
+        width: 180px;
         padding-left: 20px;
         a{
             font-weight: 700;
@@ -88,7 +88,8 @@
         position: absolute;
         bottom: 30px;
         right: 50px;
-        div{
+        button{
+            background: none;
             cursor: pointer;
             opacity: 0.5;
             font-family: 'iconfont' !important;
@@ -124,7 +125,7 @@
             height: 3px;
             margin: 5px;
             &:hover{
-                height: 5px;
+                height: 4px;
             }
         }
         .active{

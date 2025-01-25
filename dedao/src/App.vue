@@ -3,12 +3,15 @@
     <DedaoHead></DedaoHead>
     <Dedaobody></Dedaobody>
 
+
+
   </div>
 </template>
 
 <script>
 import DedaoHead from './components/DedaoHead.vue'
 import Dedaobody from './components/Dedaobody.vue'
+import streaming from './components/streaming.vue'
 
 
 export default {
@@ -16,6 +19,7 @@ export default {
   components: {
     DedaoHead,
     Dedaobody,
+    streaming,
   }
 }
 </script>

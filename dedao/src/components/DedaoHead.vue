@@ -101,15 +101,17 @@
 
 </template>
 
+
+
 <script>
 import Login from '../views/Login.vue'
+import Bus from "@/utils/EventBus";
 
 export default {
   name: 'header',
   components: {
     Login
   },
-
 
   data() {
     return {
@@ -118,6 +120,15 @@ export default {
       isActive: false,
       Energy:false,
     }
+  },
+
+  created() {
+    // 接收兄弟发送过来的消息，接收名，值
+    Bus.$on('Cloud',(mag) =>{
+      console.log(mag)
+      this.isShow1 = mag
+
+    })
   },
 
 
@@ -161,6 +172,6 @@ export default {
 </script>
 <style scoped>
 
-@import '../css/Head.css';
+@import '../css/DedaoHead.css';
 
 </style>
