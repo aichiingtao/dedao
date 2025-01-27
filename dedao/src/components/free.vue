@@ -1,21 +1,8 @@
 <template>
   <div id="streaming" class="wean">
     <div class="Shadow">
-      <h1>精选课程</h1>
-      <h4>覆盖20+领域，随时随地终身可学</h4>
-    </div>
-    <div class="Glimmer">
-      <ul class="Flourish">
-        <li @click="add(index)" v-for="(item,index) in time" :class="{active: index === index1}">
-          {{ item }}
-        </li>
-      </ul>
-      <div class="iconfont-741">
-        &#xe741;
-      </div>
-      <div class="iconfont-746">
-        &#xe746;
-      </div>
+      <h1>免费专区</h1>
+      <h4>从免费好课开始，踏上你的得到之旅</h4>
     </div>
 
     <div class="Harvest">
@@ -39,28 +26,22 @@
               {{ item.reserve }}
             </div>
 
-
+            <!--立即学习-->
             <div class="Flare">
               <a href="#">
-                <slot name="Flare"></slot>
+                <slot name="Flare1"></slot>
               </a>
             </div>
           </div>
-          <div class="Embrace">
-            <slot name="Embrace"></slot>
+
+          <!--图标-->
+          <div class="Pathway">
+            <slot name="Pathway"></slot>
           </div>
         </a>
       </div>
     </div>
 
-    <!-- 底部更多-->
-    <div class="Drift">
-      <a href="https://www.baidu.com/">
-        <slot name="lisi"></slot>
-      </a>
-
-      <i class="iconfont-746">&#xe746;</i>
-    </div>
 
   </div>
 
@@ -74,30 +55,28 @@ export default {
 
   data() {
     return {
-      index1: 0,
-      time: ['视频课', '视自我提升', '金融学', '商业', '心理学', '历史', '文学', '视频课', '职场', '职场', '职场', '职场', '职场', '职场',],
       streaming: [
         {
-          url: require('@/assets/img_4.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
+          url: require('@/assets/img_8.png'),
+          title: '得到头条',
           title1: '想在东南亚市场开辟商业新版图？千万别错过',
           reserve: '1709人已预约',
         },
         {
-          url: require('@/assets/img_5.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
+          url: require('@/assets/img_9.png'),
+          title: '文明之旅',
           title1: '想在东南亚市场开辟商业新版图？千万别错过',
           reserve: '1709人已预约',
         },
         {
-          url: require('@/assets/img_6.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
+          url: require('@/assets/img_10.png'),
+          title: '得到精选',
           title1: '想在东南亚市场开辟商业新版图？千万别错过',
           reserve: '1709人已预约',
         },
         {
-          url: require('@/assets/img_7.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
+          url: require('@/assets/img_11.png'),
+          title: '脱不花·怎样成为高效学习的人',
           title1: '想在东南亚市场开辟商业新版图？千万别错过',
           reserve: '1709人已预约',
         }

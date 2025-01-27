@@ -43,14 +43,36 @@
       </template>
     </course>
 
+    <free>
+      <template #Flare1>
+        立即学习
+      </template>
+      <template #Pathway>
+        免费
+      </template>
+    </free>
+    <Audiobook>
+      <template #lisi1>
+        更多 听书 历史
+      </template>
+    </Audiobook>
+    <Ebook>
+      <template #lisi3>
+        更多 热门 电子书
+      </template>
+    </Ebook>
   </div>
 </template>
+
 
 
 <script>
 import Bus from "@/utils/EventBus";
 import streaming from "@/components/streaming.vue";
 import course from "@/components/course.vue";
+import free from "@/components/free.vue";
+import Audiobook from "@/components/Audiobook.vue";
+import Ebook from "@/components/Ebook.vue";
 
 
 export default {
@@ -59,6 +81,9 @@ export default {
   components: {
     streaming,
     course,
+    free,
+    Audiobook,
+    Ebook,
   },
   data() {
     return {

@@ -1,8 +1,8 @@
 <template>
   <div id="streaming" class="wean">
     <div class="Shadow">
-      <h1>精选课程</h1>
-      <h4>覆盖20+领域，随时随地终身可学</h4>
+      <h1>得到听书</h1>
+      <h4>已有3400+本听书随你挑选，另外每天还会上新1本，跟上你的学习速度。我们会珍惜你每分钟的阅读时间，给你专业的好书解读。</h4>
     </div>
     <div class="Glimmer">
       <ul class="Flourish">
@@ -21,15 +21,12 @@
     <div class="Harvest">
       <div class="Firefly" v-for="(item,index) in streaming">
         <a href="https://www.baidu.com/">
-          <img :src="item.url" alt="">
+          <img :src="item.url" alt="" class="Clarity">
           <div class="Bounty">
             <div class="Meadow">
               {{ item.title }}
             </div>
-            <div class="Current">
-              {{ item.title1 }}
-            </div>
-            <div class="Legacy">
+            <div class="Legacy1">
               <i class="iconfont-93a" v-for="index in 5" :key="index">
                 &#xe93a;
               </i>
@@ -38,16 +35,7 @@
             <div class="Cascade">
               {{ item.reserve }}
             </div>
-
-
-            <div class="Flare">
-              <a href="#">
-                <slot name="Flare"></slot>
-              </a>
-            </div>
-          </div>
-          <div class="Embrace">
-            <slot name="Embrace"></slot>
+            <i class="iconfont-6ff">&#xe6ff;</i>
           </div>
         </a>
       </div>
@@ -56,7 +44,7 @@
     <!-- 底部更多-->
     <div class="Drift">
       <a href="https://www.baidu.com/">
-        <slot name="lisi"></slot>
+        <slot name="lisi1"></slot>
       </a>
 
       <i class="iconfont-746">&#xe746;</i>
@@ -75,32 +63,42 @@ export default {
   data() {
     return {
       index1: 0,
-      time: ['视频课', '视自我提升', '金融学', '商业', '心理学', '历史', '文学', '视频课', '职场', '职场', '职场', '职场', '职场', '职场',],
+      time: ['热门', '名家讲书', '精品听书', '章鱼书场', '历史', '历史', '文学', '视频课', '职场', '职场', '职场', '职场', '职场', '职场',],
       streaming: [
         {
-          url: require('@/assets/img_4.png'),
+          url: require('@/assets/img_12.png'),
+          title: '从0-1出海东南亚，避开这五大坑',
+          title1: '想在东南亚市场开辟商业新版图？千万别错过',
+          reserve: '3.1万次学习',
+        },
+        {
+          url: require('@/assets/img_12.png'),
+          title: '从0-1出海东南亚，避开这五大坑',
+          title1: '想在东南亚市场开辟商业新版图？千万别错过',
+          reserve: '3.1万次学习',
+        },
+        {
+          url: require('@/assets/img_12.png'),
           title: '从0-1出海东南亚，避开这五大坑',
           title1: '想在东南亚市场开辟商业新版图？千万别错过',
           reserve: '1709人已预约',
         },
         {
-          url: require('@/assets/img_5.png'),
+          url: require('@/assets/img_12.png'),
           title: '从0-1出海东南亚，避开这五大坑',
           title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '1709人已预约',
+          reserve: '3.1万次学习',
+        },       {
+          url: require('@/assets/img_12.png'),
+          title: '从0-1出海东南亚，避开这五大坑',
+          title1: '想在东南亚市场开辟商业新版图？千万别错过',
+          reserve: '3.1万次学习',
+        },       {
+          url: require('@/assets/img_12.png'),
+          title: '从0-1出海东南亚，避开这五大坑',
+          title1: '想在东南亚市场开辟商业新版图？千万别错过',
+          reserve: '3.1万次学习',
         },
-        {
-          url: require('@/assets/img_6.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '1709人已预约',
-        },
-        {
-          url: require('@/assets/img_7.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '1709人已预约',
-        }
       ]
     }
   },

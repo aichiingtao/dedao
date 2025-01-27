@@ -55,6 +55,9 @@
         img {
             width: 100%;
         }
+        .Clarity{
+            padding:10px 10px 0 10px;
+        }
 
         .Bounty {
             padding: 20px;
@@ -74,6 +77,8 @@
                 font-size: 12px;
                 color: #999;
             }
+
+
 
             .Flare {
                 font-size: 14px;
@@ -111,6 +116,29 @@
                 }
             }
 
+            .Legacy1{
+                bottom: 50px;
+                left: 20px;
+                position: absolute;
+                font-size: 13px;
+                color: #ff6b00;
+                .iconfont-93a{
+                    color: #ff6b00;
+                    font-size: 13px;
+                    font-family: 'iconfont' !important;
+                }
+            }
+
+            .iconfont-6ff{
+                font-family: 'iconfont' !important;
+                color: #fd6721;
+                position: absolute;
+                bottom: 15px;
+                right: 20px;
+                font-size: 25px;
+
+            }
+
         }
 
         .Quest {
@@ -138,9 +166,48 @@
             }
         }
 
+        .Pathway {
+            border-radius: 0 10px 10px 0;
+            position: absolute;
+            top: 10px;
+            left: -4px;
+            padding: 5px 8px;
+            font-size: 11px;
+            color: #ffffff;
+            background: linear-gradient(90.12deg, #59ccb2 0.1%, #0bb861 99.9%);
+
+        }
+
+        .Radiance{
+            border-radius: 0 10px 10px 0;
+            position: absolute;
+            top: 10px;
+            left: -4px;
+            padding: 5px 8px;
+            font-size: 11px;
+            color: #ffffff;
+            background: linear-gradient(90.12deg, #59ccb2 0.1%, #0bb861 99.9%);
+
+        }
+        .Insight{
+            border-radius: 0 10px 10px 0;
+            position: absolute;
+            top: 10px;
+            left: -4px;
+            padding: 5px 8px;
+            font-size: 11px;
+            color: #ffffff;
+            background: linear-gradient(90.12deg, #59ccb2 0.1%, #0bb861 99.9%);
+
+        }
+
         }
 
     }
+
+.Reflection{
+    margin-top: 50px;
+}
 
 
 
@@ -231,6 +298,7 @@
         &:hover{
             color: #ff6b00;
         }
+
     }
 }
 

@@ -128,11 +128,19 @@ export default {
       console.log(mag)
       this.isShow1 = mag
 
-    })
+    });
+    window.addEventListener('click', this.Vitality);
+
   },
 
 
   methods: {
+    // 关闭热门框
+    Vitality(){
+      this.isShow = false
+
+    },
+
     add() {
       if (!this.isShow && !this.isActive) {
         this.isShow = true
