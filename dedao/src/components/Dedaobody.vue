@@ -12,7 +12,8 @@
           </ul>
         </li>
       </ul>
-      <div class="Chocolate">
+      <!--      鼠标经过，鼠标离开     -->
+      <div class="Chocolate" @mouseenter="stopCarousel" @mouseleave="startCarousel">
         <img :src="img[index1]" alt="">
         <div class="Galaxy">
           <button :class="{active:Forest}" @click="index1--" :disabled="index1 <= 0"> &#xe741;</button>
@@ -56,14 +57,13 @@
         更多 听书 历史
       </template>
     </Audiobook>
-    <Ebook>
-      <template #lisi3>
+    <Audiobook>
+      <template #lisi1>
         更多 热门 电子书
       </template>
-    </Ebook>
+    </Audiobook>
   </div>
 </template>
-
 
 
 <script>
@@ -92,7 +92,7 @@ export default {
       img: [
         'https://piccdn3.umiwi.com/img/202501/06/202501060339045242527382.jpeg',
         'https://piccdn3.umiwi.com/img/202501/22/202501220624359518633947.jpeg',
-        'https://piccdn3.umiwi.com/img/202501/06/202501060339045242527382.jpeg',
+        'https://piccdn2.umiwi.com/fe-oss/default/MTYzNTQxMTQwNDI5.jpeg',
 
 
       ],
@@ -122,12 +122,37 @@ export default {
     }
   },
 
+  mounted() {
+    this.startCarousel();
+
+  },
+
   methods: {
     addEnergy() {
       //   发送值给兄弟子组件
       Bus.$emit('Cloud', true)
     },
+    startCarousel() {
+      let i = this.index1;
+      this.interval = setInterval(() => {
+        console.log(1)
+        i++
+        if (i >= this.img.length) {
+          i = 0
+        }
+        this.index1 = i
+      }, 1000)
+    },
+
+    // 鼠标经过照片盒子，关闭定时器
+    stopCarousel() {
+      clearInterval(this.interval)
+    }
+
+
   }
+
+
 }
 
 </script>

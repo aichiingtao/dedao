@@ -18,13 +18,13 @@
       </div>
     </div>
 
-    <div class="Harvest"  v-for="(index) in time" :key="index" v-if="index === Journey"   >
+    <div class="Harvest" v-for="(index) in streaming" :key="index" v-show='index1'>
       <div class="Firefly" v-for="(item) in streaming">
         <a href="https://www.baidu.com/">
-          <img :src="item.url" alt="" class="Clarity">
+          <img :src="item. Enthusiasm.url" alt="" class="Clarity">
           <div class="Bounty">
             <div class="Meadow">
-              {{ item.title }}
+              {{ item. Enthusiasm.title }}
             </div>
             <div class="Legacy1">
               <i class="iconfont-93a" v-for="index in 5" :key="index">
@@ -33,7 +33,7 @@
               4.5分
             </div>
             <div class="Cascade">
-              {{ item.reserve }}
+              {{ item. Enthusiasm.reserve }}
             </div>
             <i class="iconfont-6ff">&#xe6ff;</i>
           </div>
@@ -65,42 +65,35 @@ export default {
 
   data() {
     return {
+
       index1: 0,
+
       time: ['热门', '名家讲书', '精品听书', '章鱼书场', '历史', '历史', '文学', '视频课', '职场', '职场', '职场', '职场', '职场', '职场',],
       streaming: [
         {
-          url: require('@/assets/img_13.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '3.1万次学习',
-        },
-        {
-          url: require('@/assets/img_13.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '3.1万次学习',
-        },
-        {
-          url: require('@/assets/img_13.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '1709人已预约',
-        },
-        {
-          url: require('@/assets/img_13.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '3.1万次学习',
-        },       {
-          url: require('@/assets/img_13.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '3.1万次学习',
-        },       {
-          url: require('@/assets/img_13.png'),
-          title: '从0-1出海东南亚，避开这五大坑',
-          title1: '想在东南亚市场开辟商业新版图？千万别错过',
-          reserve: '3.1万次学习',
+          title:'热门',
+          Enthusiasm: {
+            url: require('@/assets/img_13.png'),
+            title: '从0-1出海东南亚，避开这五大坑',
+            title1: '想在东南亚市场开辟商业新版图？千万别错过',
+            reserve: '3.1万次学习',
+          }
+        },        {
+          title:'名家讲书',
+          Enthusiasm: {
+            url: require('@/assets/img_13.png'),
+            title: '从0-1出海东南亚，避开这五大坑',
+            title1: '想在东南亚市场开辟商业新版图？千万别错过',
+            reserve: '3.1万次学习',
+          }
+        },        {
+          title:'精品听书',
+          Enthusiasm: {
+            url: require('@/assets/img_13.png'),
+            title: '从0-1出海东南亚，避开这五大坑',
+            title1: '想在东南亚市场开辟商业新版图？千万别错过',
+            reserve: '3.1万次学习',
+          }
         },
       ],
       // 记录当前是第几个 盒子
