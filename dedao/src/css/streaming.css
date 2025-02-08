@@ -249,13 +249,21 @@
         border-radius: 10px;
         align-items: center;
         padding: 0 5px;
+
         li{
+            transition: transform 0.3s;
+            flex-shrink:0;
             cursor: pointer;
             text-align: center;
             line-height: 40px;
             padding: 0 20px;
             height: 40px;
             border-radius: 8px;
+
+        }
+        .tabs {
+            display: flex; /* 横向排列 Tabs */
+            transition: transform 0.3s; /* 平滑过渡 */
         }
         .active{
             background-color: #ff6b00;
